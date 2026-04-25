@@ -1,9 +1,9 @@
 ### Requirement: AI brain renders at top center
-The system SHALL render a digital brain entity at the top-center of the canvas. The brain SHALL be drawn as a pixel-art style brain/circuit shape with four robotic arms extending from it.
+The system SHALL render a digital brain entity in the upper portion of the canvas, positioned below the health bar HUD with a visible margin. The brain SHALL be drawn as a pixel-art style brain/circuit shape with four robotic arms extending from it.
 
 #### Scenario: Brain position
 - **WHEN** the game is running
-- **THEN** the AI brain is rendered centered horizontally in the upper portion of the canvas
+- **THEN** the AI brain is rendered centered horizontally, below the health bar with clear visual separation
 
 ### Requirement: Four robotic arms fire projectiles
 The AI brain SHALL have four robotic arms that fire red circular projectiles downward in regular timed patterns. Each arm SHALL fire independently at set intervals. Each projectile SHALL be aimed at a random horizontal target position selected uniformly from the full canvas width `[0, CANVAS_W]`, resulting in an angled trajectory from the arm to the target.
