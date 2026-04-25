@@ -38,7 +38,7 @@ Empieza con un directorio vacío. Ejecuta cada prompt en secuencia con `/opsx:pr
 
 > Crea un juego arcade estilo Galaga llamado "Humanity vs AI". El juego se renderiza en un canvas HTML5 de 800x600 con estética pixel art y la fuente Press Start 2P.
 >
-> El jugador controla una nave en la parte inferior con las flechas del teclado y dispara con la barra espaciadora. El enemigo es un cerebro digital de IA en la parte superior con cuatro brazos robóticos que disparan proyectiles rojos hacia abajo.
+> El jugador controla una nave en la parte inferior con las flechas del teclado y dispara con la barra espaciadora. El enemigo es un cerebro digital de IA en la parte superior con cuatro brazos robóticos que disparan proyectiles rojos hacia abajo. Cada proyectil apunta a una posición X aleatoria en el rango completo [0, CANVAS_W], viajando en ángulo desde el brazo hasta ese punto. El resultado es una distribución uniforme de impactos a lo ancho de todo el canvas, sin zonas seguras.
 >
 > La IA tiene 1000 HP. Cada impacto del jugador resta 10 HP. Cuando llega a 0, aparece pantalla de victoria "HUMANITY WINS" con opción de reiniciar con R.
 >
@@ -60,25 +60,6 @@ Empieza con un directorio vacío. Ejecuta cada prompt en secuencia con `/opsx:pr
 ---
 
 ## Prompt 2
-
-```
-/opsx:propose fix-ai-projectile-coverage
-```
-
-> Los proyectiles de la IA caen en línea recta desde las cuatro posiciones fijas de los brazos, creando columnas predecibles con una zona segura de ~64px en el centro donde el jugador puede quedarse quieto indefinidamente sin morir.
->
-> Arregla esto haciendo que cada bala apunte a una posición X aleatoria en el rango completo [0, CANVAS_W] al fondo del canvas. Calcula el vx necesario para que la bala viaje desde el brazo hasta ese punto objetivo. El resultado debe ser una distribución uniforme de impactos a lo ancho de todo el canvas, eliminando zonas seguras.
-
-**Resultado**: Los proyectiles ahora viajan en ángulo hacia posiciones aleatorias, cubriendo todo el ancho del canvas.
-
-```
-/opsx:apply
-/opsx:archive
-```
-
----
-
-## Prompt 3
 
 ```
 /opsx:propose mobile-remote-control
@@ -103,7 +84,7 @@ Empieza con un directorio vacío. Ejecuta cada prompt en secuencia con `/opsx:pr
 
 ---
 
-## Prompt 4
+## Prompt 3
 
 ```
 /opsx:propose multiplayer-queue-system
@@ -132,7 +113,7 @@ Empieza con un directorio vacío. Ejecuta cada prompt en secuencia con `/opsx:pr
 
 ---
 
-## Prompt 5
+## Prompt 4
 
 ```
 /opsx:propose add-game-sounds
@@ -236,4 +217,4 @@ Ventajas observadas en este proyecto:
 - **Trazabilidad**: Cada línea de código tiene un camino claro desde el prompt original → propuesta → diseño → spec → tarea → implementación.
 - **Iteración incremental**: Cambios pequeños y bien definidos que se acumulan. Cada cambio tiene su propio contexto aislado.
 - **Documentación automática**: Las specs en `openspec/specs/` son documentación viva del sistema, actualizada con cada cambio.
-- **Reproducibilidad**: Este documento demuestra que la app puede regenerarse ejecutando 5 prompts en secuencia.
+- **Reproducibilidad**: Este documento demuestra que la app puede regenerarse ejecutando 4 prompts en secuencia.

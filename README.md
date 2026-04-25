@@ -45,7 +45,7 @@ Sin Firebase configurado, el juego funciona en modo single-player con teclado (f
 
 ## Los prompts
 
-El archivo **[PROMPTS.md](PROMPTS.md)** contiene los 5 prompts exactos que se usaron para generar todo el código de este proyecto, con instrucciones para reproducirlo desde cero.
+El archivo **[PROMPTS.md](PROMPTS.md)** contiene los 4 prompts exactos que se usaron para generar todo el código de este proyecto, con instrucciones para reproducirlo desde cero.
 
 ## Stack
 
