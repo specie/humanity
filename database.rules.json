@@ -1,0 +1,7 @@
+{
+  /* TODO: Harden these rules for production. Open access for demo only. */
+  "rules": {
+    ".read": true,
+    ".write": true
+  }
+}

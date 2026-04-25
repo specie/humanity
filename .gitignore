@@ -1,0 +1,8 @@
+node_modules
+dist
+.env
+.firebase
+.idea
+.agents
+.claude
+skills-lock.json
